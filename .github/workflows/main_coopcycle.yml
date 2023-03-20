@@ -52,5 +52,5 @@ jobs:
         with:
           app-name: 'CoopCycle'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_F443B95490594501B5C12D139444F180 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_9564B702B1F94168A23CA0EC10EC2D3B }}
           package: .
