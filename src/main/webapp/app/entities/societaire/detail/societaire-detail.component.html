@@ -1,0 +1,40 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <div *ngIf="societaire">
+      <h2 data-cy="societaireDetailsHeading"><span jhiTranslate="coopcycleApp.societaire.detail.title">Societaire</span></h2>
+
+      <hr />
+
+      <jhi-alert-error></jhi-alert-error>
+
+      <jhi-alert></jhi-alert>
+
+      <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="global.field.id">ID</span></dt>
+        <dd>
+          <span>{{ societaire.id }}</span>
+        </dd>
+        <dt><span jhiTranslate="coopcycleApp.societaire.firstName">First Name</span></dt>
+        <dd>
+          <span>{{ societaire.firstName }}</span>
+        </dd>
+        <dt><span jhiTranslate="coopcycleApp.societaire.lastName">Last Name</span></dt>
+        <dd>
+          <span>{{ societaire.lastName }}</span>
+        </dd>
+        <dt><span jhiTranslate="coopcycleApp.societaire.type">Type</span></dt>
+        <dd>
+          <span jhiTranslate="{{ 'coopcycleApp.SocietaireType.' + societaire.type }}">{{ societaire.type }}</span>
+        </dd>
+      </dl>
+
+      <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+        <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+      </button>
+
+      <button type="button" [routerLink]="['/societaire', societaire.id, 'edit']" class="btn btn-primary">
+        <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+      </button>
+    </div>
+  </div>
+</div>

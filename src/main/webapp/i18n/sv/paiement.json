@@ -1,0 +1,25 @@
+{
+  "coopcycleApp": {
+    "paiement": {
+      "home": {
+        "title": "Paiements",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Skapa en ny Paiement",
+        "createOrEditLabel": "Skapa eller ändra en Paiement",
+        "notFound": "No Paiements found"
+      },
+      "created": "En ny Paiement är skapad med id {{ param }}",
+      "updated": "En Paiement är uppdaterad med id  {{ param }}",
+      "deleted": "En Paiement är borttagen med id  {{ param }}",
+      "delete": {
+        "question": "Är du säker på att du vill ta bort Paiement {{ id }}?"
+      },
+      "detail": {
+        "title": "Paiement"
+      },
+      "id": "ID",
+      "amount": "Amount",
+      "paymentType": "Payment Type"
+    }
+  }
+}

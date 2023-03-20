@@ -1,0 +1,27 @@
+{
+  "coopcycleApp": {
+    "societaire": {
+      "home": {
+        "title": "Societaires",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Maak een nieuwe Societaire",
+        "createOrEditLabel": "Maak of wijzig een Societaire",
+        "notFound": "No Societaires found"
+      },
+      "created": "A new Societaire is created with identifier {{ param }}",
+      "updated": "A Societaire is updated with identifier {{ param }}",
+      "deleted": "A Societaire is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Bent u zeker dat u Societaire {{ id }} wilt verwijderen?"
+      },
+      "detail": {
+        "title": "Societaire"
+      },
+      "id": "ID",
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "type": "Type",
+      "restaurateur": "Restaurateur"
+    }
+  }
+}

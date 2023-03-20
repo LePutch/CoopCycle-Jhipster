@@ -1,0 +1,42 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <div *ngIf="panier">
+      <h2 data-cy="panierDetailsHeading"><span jhiTranslate="coopcycleApp.panier.detail.title">Panier</span></h2>
+
+      <hr />
+
+      <jhi-alert-error></jhi-alert-error>
+
+      <jhi-alert></jhi-alert>
+
+      <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="coopcycleApp.panier.id">Id</span></dt>
+        <dd>
+          <span>{{ panier.id }}</span>
+        </dd>
+        <dt><span jhiTranslate="coopcycleApp.panier.description">Description</span></dt>
+        <dd>
+          <span>{{ panier.description }}</span>
+        </dd>
+        <dt><span jhiTranslate="coopcycleApp.panier.price">Price</span></dt>
+        <dd>
+          <span>{{ panier.price }}</span>
+        </dd>
+        <dt><span jhiTranslate="coopcycleApp.panier.restaurant">Restaurant</span></dt>
+        <dd>
+          <div *ngIf="panier.restaurant">
+            <a [routerLink]="['/restaurant', panier.restaurant.id, 'view']">{{ panier.restaurant.id }}</a>
+          </div>
+        </dd>
+      </dl>
+
+      <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+        <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+      </button>
+
+      <button type="button" [routerLink]="['/panier', panier.id, 'edit']" class="btn btn-primary">
+        <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+      </button>
+    </div>
+  </div>
+</div>

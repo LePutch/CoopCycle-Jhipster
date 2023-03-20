@@ -1,0 +1,27 @@
+{
+  "coopcycleApp": {
+    "societaire": {
+      "home": {
+        "title": "Societaires",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Skapa en ny Societaire",
+        "createOrEditLabel": "Skapa eller ändra en Societaire",
+        "notFound": "No Societaires found"
+      },
+      "created": "En ny Societaire är skapad med id {{ param }}",
+      "updated": "En Societaire är uppdaterad med id  {{ param }}",
+      "deleted": "En Societaire är borttagen med id  {{ param }}",
+      "delete": {
+        "question": "Är du säker på att du vill ta bort Societaire {{ id }}?"
+      },
+      "detail": {
+        "title": "Societaire"
+      },
+      "id": "ID",
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "type": "Type",
+      "restaurateur": "Restaurateur"
+    }
+  }
+}

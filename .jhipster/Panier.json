@@ -1,0 +1,41 @@
+{
+  "applications": "*",
+  "changelogDate": "20230319165236",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "panier",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "String",
+      "fieldValidateRules": ["minlength", "maxlength"],
+      "fieldValidateRulesMaxlength": "500",
+      "fieldValidateRulesMinlength": "5"
+    },
+    {
+      "fieldName": "price",
+      "fieldType": "Float",
+      "fieldValidateRules": ["required", "min"],
+      "fieldValidateRulesMin": "0"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Panier",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "restaurant",
+      "otherEntityRelationshipName": "panier",
+      "relationshipName": "restaurant",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "serviceClass"
+}

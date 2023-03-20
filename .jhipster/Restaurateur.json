@@ -1,0 +1,49 @@
+{
+  "applications": "*",
+  "changelogDate": "20230319165233",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "restaurateur",
+  "fields": [
+    {
+      "fieldName": "firstName",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "minlength", "maxlength"],
+      "fieldValidateRulesMaxlength": "50",
+      "fieldValidateRulesMinlength": "2"
+    },
+    {
+      "fieldName": "lastName",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "minlength", "maxlength"],
+      "fieldValidateRulesMaxlength": "50",
+      "fieldValidateRulesMinlength": "2"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Restaurateur",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "commande",
+      "otherEntityRelationshipName": "restaurateur",
+      "relationshipName": "commande",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "societaire",
+      "otherEntityRelationshipName": "restaurateur",
+      "relationshipName": "societaire",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "restaurant",
+      "otherEntityRelationshipName": "restaurateur",
+      "relationshipName": "restaurant",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "service": "serviceClass"
+}

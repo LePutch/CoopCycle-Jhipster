@@ -1,0 +1,28 @@
+{
+  "coopcycleApp": {
+    "restaurateur": {
+      "home": {
+        "title": "Restaurateurs",
+        "refreshListLabel": "Actualiser la liste",
+        "createLabel": "Créer un nouveau Restaurateur",
+        "createOrEditLabel": "Créer ou éditer un Restaurateur",
+        "notFound": "Aucun Restaurateur trouvé"
+      },
+      "created": "Un nouveau Restaurateur a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Restaurateur avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Restaurateur avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Êtes-vous certain de vouloir supprimer le Restaurateur {{ id }} ?"
+      },
+      "detail": {
+        "title": "Restaurateur"
+      },
+      "id": "ID",
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "commande": "Commande",
+      "societaire": "Societaire",
+      "restaurant": "Restaurant"
+    }
+  }
+}

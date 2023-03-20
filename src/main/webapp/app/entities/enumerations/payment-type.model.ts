@@ -1,0 +1,19 @@
+export enum PaymentType {
+  CB = 'CB',
+
+  MASTERCARD = 'MASTERCARD',
+
+  VISA = 'VISA',
+
+  PAYPAL = 'PAYPAL',
+
+  APPLE_PAY = 'APPLE_PAY',
+
+  GOOGLE_PAY = 'GOOGLE_PAY',
+
+  CHEQUE_REPAS = 'CHEQUE_REPAS',
+
+  BITCOIN = 'BITCOIN',
+
+  IZLY = 'IZLY',
+}

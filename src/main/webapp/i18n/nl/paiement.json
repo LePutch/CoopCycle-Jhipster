@@ -1,0 +1,25 @@
+{
+  "coopcycleApp": {
+    "paiement": {
+      "home": {
+        "title": "Paiements",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Maak een nieuwe Paiement",
+        "createOrEditLabel": "Maak of wijzig een Paiement",
+        "notFound": "No Paiements found"
+      },
+      "created": "A new Paiement is created with identifier {{ param }}",
+      "updated": "A Paiement is updated with identifier {{ param }}",
+      "deleted": "A Paiement is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Bent u zeker dat u Paiement {{ id }} wilt verwijderen?"
+      },
+      "detail": {
+        "title": "Paiement"
+      },
+      "id": "ID",
+      "amount": "Amount",
+      "paymentType": "Payment Type"
+    }
+  }
+}

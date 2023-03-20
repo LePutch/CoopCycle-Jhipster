@@ -1,0 +1,28 @@
+{
+  "coopcycleApp": {
+    "restaurant": {
+      "home": {
+        "title": "Restaurants",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Maak een nieuwe Restaurant",
+        "createOrEditLabel": "Maak of wijzig een Restaurant",
+        "notFound": "No Restaurants found"
+      },
+      "created": "A new Restaurant is created with identifier {{ param }}",
+      "updated": "A Restaurant is updated with identifier {{ param }}",
+      "deleted": "A Restaurant is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Bent u zeker dat u Restaurant {{ id }} wilt verwijderen?"
+      },
+      "detail": {
+        "title": "Restaurant"
+      },
+      "id": "ID",
+      "name": "Name",
+      "address": "Address",
+      "menu": "Menu",
+      "panier": "Panier",
+      "restaurateur": "Restaurateur"
+    }
+  }
+}

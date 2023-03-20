@@ -1,0 +1,10 @@
+{
+  "coopcycleApp": {
+    "CommandeStatus": {
+      "null": "",
+      "EN_COURS": "EN_COURS",
+      "PRETE": "PRETE",
+      "LIVREE": "LIVREE"
+    }
+  }
+}

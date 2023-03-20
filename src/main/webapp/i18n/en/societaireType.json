@@ -1,0 +1,10 @@
+{
+  "coopcycleApp": {
+    "SocietaireType": {
+      "null": "",
+      "LIVREUR": "LIVREUR",
+      "RESTAURATEUR": "RESTAURATEUR",
+      "CLIENT": "CLIENT"
+    }
+  }
+}

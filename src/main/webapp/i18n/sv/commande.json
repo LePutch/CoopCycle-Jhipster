@@ -1,0 +1,29 @@
+{
+  "coopcycleApp": {
+    "commande": {
+      "home": {
+        "title": "Commandes",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Skapa en ny Commande",
+        "createOrEditLabel": "Skapa eller ändra en Commande",
+        "notFound": "No Commandes found"
+      },
+      "created": "En ny Commande är skapad med id {{ param }}",
+      "updated": "En Commande är uppdaterad med id  {{ param }}",
+      "deleted": "En Commande är borttagen med id  {{ param }}",
+      "delete": {
+        "question": "Är du säker på att du vill ta bort Commande {{ id }}?"
+      },
+      "detail": {
+        "title": "Commande"
+      },
+      "id": "ID",
+      "dateTime": "Date Time",
+      "status": "Status",
+      "panier": "Panier",
+      "paiement": "Paiement",
+      "client": "Client",
+      "restaurateur": "Restaurateur"
+    }
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "applications": "*",
+  "changelogDate": "20230319165235",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "commande",
+  "fields": [
+    {
+      "fieldName": "dateTime",
+      "fieldType": "Instant",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "status",
+      "fieldType": "CommandeStatus",
+      "fieldValidateRules": ["required"],
+      "fieldValues": "EN_COURS,PRETE,LIVREE"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Commande",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityField": "id",
+      "otherEntityName": "panier",
+      "ownerSide": true,
+      "relationshipName": "panier",
+      "relationshipType": "one-to-one",
+      "relationshipValidateRules": "required"
+    },
+    {
+      "otherEntityName": "paiement",
+      "relationshipName": "paiement",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "client",
+      "otherEntityRelationshipName": "commande",
+      "relationshipName": "client",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "restaurateur",
+      "otherEntityRelationshipName": "commande",
+      "relationshipName": "restaurateur",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "service": "serviceClass"
+}

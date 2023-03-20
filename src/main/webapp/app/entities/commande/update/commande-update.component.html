@@ -1,0 +1,115 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+      <h2 id="jhi-commande-heading" data-cy="CommandeCreateUpdateHeading" jhiTranslate="coopcycleApp.commande.home.createOrEditLabel">
+        Create or edit a Commande
+      </h2>
+
+      <div>
+        <jhi-alert-error></jhi-alert-error>
+
+        <div class="row mb-3" *ngIf="editForm.controls.id.value !== null">
+          <label class="form-label" jhiTranslate="global.field.id" for="field_id">ID</label>
+          <input type="number" class="form-control" name="id" id="field_id" data-cy="id" formControlName="id" [readonly]="true" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="coopcycleApp.commande.dateTime" for="field_dateTime">Date Time</label>
+          <div class="d-flex">
+            <input
+              id="field_dateTime"
+              data-cy="dateTime"
+              type="datetime-local"
+              class="form-control"
+              name="dateTime"
+              formControlName="dateTime"
+              placeholder="YYYY-MM-DD HH:mm"
+            />
+          </div>
+          <div *ngIf="editForm.get('dateTime')!.invalid && (editForm.get('dateTime')!.dirty || editForm.get('dateTime')!.touched)">
+            <small
+              class="form-text text-danger"
+              *ngIf="editForm.get('dateTime')?.errors?.required"
+              jhiTranslate="entity.validation.required"
+            >
+              This field is required.
+            </small>
+            <small
+              class="form-text text-danger"
+              [hidden]="!editForm.get('dateTime')?.errors?.datetimelocal"
+              jhiTranslate="entity.validation.datetimelocal"
+            >
+              This field should be a date and time.
+            </small>
+          </div>
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="coopcycleApp.commande.status" for="field_status">Status</label>
+          <select class="form-control" name="status" formControlName="status" id="field_status" data-cy="status">
+            <option [ngValue]="null">{{ 'coopcycleApp.CommandeStatus.null' | translate }}</option>
+            <option *ngFor="let commandeStatus of commandeStatusValues" [value]="commandeStatus">
+              {{ 'coopcycleApp.CommandeStatus.' + commandeStatus | translate }}
+            </option>
+          </select>
+          <div *ngIf="editForm.get('status')!.invalid && (editForm.get('status')!.dirty || editForm.get('status')!.touched)">
+            <small class="form-text text-danger" *ngIf="editForm.get('status')?.errors?.required" jhiTranslate="entity.validation.required">
+              This field is required.
+            </small>
+          </div>
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="coopcycleApp.commande.panier" for="field_panier">Panier</label>
+          <select
+            class="form-control"
+            id="field_panier"
+            data-cy="panier"
+            name="panier"
+            formControlName="panier"
+            [compareWith]="comparePanier"
+          >
+            <option *ngIf="!editForm.get('panier')!.value" [ngValue]="null" selected></option>
+            <option [ngValue]="panierOption" *ngFor="let panierOption of paniersSharedCollection">{{ panierOption.id }}</option>
+          </select>
+        </div>
+        <div *ngIf="editForm.get(['panier'])!.invalid && (editForm.get(['panier'])!.dirty || editForm.get(['panier'])!.touched)">
+          <small class="form-text text-danger" *ngIf="editForm.get(['panier'])?.errors?.required" jhiTranslate="entity.validation.required">
+            This field is required.
+          </small>
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="coopcycleApp.commande.paiement" for="field_paiement">Paiement</label>
+          <select
+            class="form-control"
+            id="field_paiement"
+            data-cy="paiement"
+            name="paiement"
+            formControlName="paiement"
+            [compareWith]="comparePaiement"
+          >
+            <option [ngValue]="null"></option>
+            <option [ngValue]="paiementOption" *ngFor="let paiementOption of paiementsSharedCollection">{{ paiementOption.id }}</option>
+          </select>
+        </div>
+      </div>
+
+      <div>
+        <button type="button" id="cancel-save" data-cy="entityCreateCancelButton" class="btn btn-secondary" (click)="previousState()">
+          <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+        </button>
+
+        <button
+          type="submit"
+          id="save-entity"
+          data-cy="entityCreateSaveButton"
+          [disabled]="editForm.invalid || isSaving"
+          class="btn btn-primary"
+        >
+          <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
